@@ -28,12 +28,12 @@ const logoStorage = multer.diskStorage({
     },
 });
 const uploadLogo = multer({ storage: logoStorage });
-
+const baseUrl = process.env.API_URL || `http://localhost:${process.env.PORT}`;
 // Upload image handler
 exports.uploadImage = (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:${process.env.PORT}/images/${req.file.filename}`,
+        image_url: `${baseUrl}/images/${req.file.filename}`,
     });
 };
 
@@ -44,9 +44,10 @@ exports.uploadLogo = (req, res) => {
     }
     res.json({
         success: 1,
-        logo_url: `http://localhost:${process.env.PORT}/logos/${req.file.filename}`,
+        logo_url: `${baseUrl}/logos/${req.file.filename}`,
     });
 };
+
 
 // Multer middlewares
 exports.uploadImageMiddleware = uploadImage.single('product');
