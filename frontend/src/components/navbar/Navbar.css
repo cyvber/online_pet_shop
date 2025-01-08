@@ -1,0 +1,194 @@
+/* Default Styles */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    background-image: url('../assets/frontend_assets/Main_Banner.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 0px;
+    box-shadow: 0 1px 5px -2px #ffcf1a;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust opacity for transparency */
+    
+}
+
+.nav-logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 150px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    flex-direction: row-reverse;
+    color: #626262;
+    font-weight: 500;
+    font-size: 20px;
+}
+.nav-menu li {
+    display: inline-block; /* Ensure li behaves as inline-block for border animations */
+    position: relative; /* Set position to relative for pseudo-element positioning */
+    font-size: 20px; /* Adjust as needed */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    cursor: pointer;
+}
+
+.nav-menu li:hover {
+    transform: scale(1.1); /* Slightly enlarge the element on hover */
+}
+
+.nav-menu li::after {
+    content: ''; /* Create the bottom border */
+    position: absolute;
+    bottom: -5px; /* Position below the text */
+    left: 50%; /* Start from the middle */
+    width: 0; /* Initially no width */
+    height: 2px; /* Thickness of the border */
+    background-color: #ff6347; /* Choose your desired border color (e.g., tomato) */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-menu li:hover::after {
+    width: 100%; /* Expand the border to the full width */
+    left: 0; /* Reset left position to align with the start of the text */
+}
+
+.nav-cart-user {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row-reverse;
+    margin-left: 100px;
+}
+
+.nav-cart-user img {
+    width: 40px;
+}
+
+.cart-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background: red;
+    border-radius: 11px;
+    font-size: 14px;
+    color: white;
+    margin-top: -35px;
+    margin-left: -50px;
+}
+
+/* Responsive Styles */
+
+/* For screens <= 1000px */
+@media (max-width: 1000px) {
+    .nav-logo img {
+        width: 100px; /* Reduce logo size */
+        margin-right: 100px; /* Adjust spacing */
+    }
+
+    .nav-menu {
+        gap: 20px; /* Reduce gap between menu items */
+    }
+    .nav-menu li {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .nav-cart-user {
+        gap: 30px; /* Adjust spacing */
+        margin-left: 50px; /* Adjust margin */
+    }
+    .banner {
+        height: 60vh;
+    }
+}
+
+/* For screens <= 800px */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column; /* Stack the navbar vertically */
+        align-items: center;
+    }
+
+    .nav-logo img {
+        margin-right: 0; /* Center the logo */
+    }
+
+
+    .nav-menu li {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .nav-cart-user {
+        margin-left: 0; /* Center cart section */
+    }
+    .banner {
+        height: 40vh;
+    }
+}
+/* For screens <= 600px */
+@media (max-width: 600px) {
+    .nav-logo img {
+        width: 80px; /* Further reduce logo size */
+    }
+
+    .nav-menu {
+        gap: 15px; /* Reduce gap further */
+        margin-right: 10px;
+    }
+    .nav-menu li {
+        font-size: 12px; /* Reduce font size */
+        background-color: #e7e7e7;
+        padding: 5px;
+        text-align: right;
+        border-radius: 5px;
+    }
+    .nav-cart-user {
+        flex-direction: column; /* Stack cart and user icons */
+        gap: 15px;
+        margin-left: 0;
+    }
+
+    .cart-count {
+        position: absolute; /* Use absolute positioning for better placement */
+        bottom: 25px;
+        right: 210px; /* Adjust horizontal position to align with the icon */
+        width: 18px; /* Smaller width */
+        height: 18px; /* Smaller height */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .nav-cart-user {
+        position: relative; /* Ensure positioning context for .cart-count */
+    }
+    .banner {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .cart-count {
+        position: absolute; /* Use absolute positioning for better placement */
+        bottom: 25px;
+        right: 190px; /* Adjust horizontal position to align with the icon */
+        width: 18px; /* Smaller width */
+        height: 18px; /* Smaller height */
+        font-size: 12px; /* Smaller font size */
+    }
+}
+  

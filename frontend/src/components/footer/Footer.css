@@ -1,0 +1,46 @@
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	
+    flex-direction: row-reverse;
+	padding: 20px; /*footer size*/
+	background: #E3E6F3;
+}
+
+.footer img {
+    width: 250px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: contain; /* Ensures the image fits inside the container without distortion */
+    max-width: 100%; /* Prevents the image from overflowing the container */
+    max-height: 100%; /* Limits the height to fit within the container */
+}
+.col {
+    text-align: right;
+    padding: 0 100px;
+}
+.col h4 {
+    font-size: 14px;
+}
+.footer  p {
+    color: #465b52;
+    font-size: 13px;
+    cursor: pointer;
+}
+p { color: #465b52;
+    font-size: 13px;}
+
+.text {
+    margin-bottom: 50px;
+}
+.text p {
+    cursor:auto;
+}
+.socials img {
+    width: 30px;
+    height: auto;
+}
+.cpyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}

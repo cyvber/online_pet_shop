@@ -1,0 +1,85 @@
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.carousel {
+    overflow: hidden;
+    padding: 30px 0 ;
+    white-space: nowrap;
+    position: relative;
+}
+.carousel:before, .carousel:after  {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.carousel:before {
+    left: 0;
+    background: linear-gradient(to left, transparent, white);
+}
+.carousel:after {
+    right: 0;
+    background: linear-gradient(to right, transparent, white);
+}
+
+.carousel:hover .logos{
+    animation-play-state: paused;
+}
+.logos {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+}
+
+.logos img {
+    margin: 0 40px;
+    height: 70px;
+}
+/* For screens <= 1000px */
+@media (max-width: 1000px) {
+    .carousel {
+        padding: 20px 0;
+    }
+
+    .logos {
+        animation: 20s slide infinite linear; /* Speed up the animation a bit */
+    }
+
+    .logos img {
+        margin: 0 30px; /* Reduce margin between images */
+        height: 60px; /* Slightly reduce image size */
+    }
+
+    .carousel:before,
+    .carousel:after {
+        width: 200px; /* Slightly reduce the gradient width */
+    }
+}
+
+/* For screens <= 600px */
+@media (max-width: 600px) {
+    .carousel {
+        padding: 15px 0;
+    }
+
+    .logos {
+        animation: 15s slide infinite linear; /* Speed up the animation more */
+    }
+
+    .logos img {
+        margin: 0 15px; /* Further reduce margin between images */
+        height: 50px; /* Further reduce image size */
+    }
+
+    .carousel:before,
+    .carousel:after {
+        width: 150px; /* Reduce gradient width for mobile */
+    }
+}

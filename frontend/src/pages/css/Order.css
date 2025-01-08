@@ -1,0 +1,83 @@
+/* OrderPage.css */
+
+.order-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form, .order-summary, .payment-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-section label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.place-order-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.place-order-button:hover {
+    background-color: #218838;
+}

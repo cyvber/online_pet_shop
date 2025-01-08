@@ -1,0 +1,112 @@
+.item {
+    width: 21%;
+    min-width: 250px;
+    padding: 0 12px;
+    border: 1px solid #ffaa00;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.item img {
+    border-radius: 20px;
+    height: 300px;
+    max-width: 100%;
+}
+
+.item-details {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Space between title and price */
+    min-height: 150px; /* Ensure consistent height for all items */
+}
+
+.item-details span {
+    color: #606063;
+    font-size: 12px;
+}
+
+.item-details h5 {
+    margin-right: 10px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.item-details h4 {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 0;
+}
+.item-price {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end; /* Align prices at the bottom */
+    margin-top: auto; /* Push the price section to the bottom */
+}
+.old-price {
+    text-decoration: line-through black 2px solid;
+}
+
+
+.cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.discount-icon {
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.discount-icon p {
+    margin: 0;
+}
+
+
+/* Hover effect for the cart icon */
+.cart-icon:hover {
+    transform: scale(1.1);
+	background-color: #ffcf1a;
+}
+
+/* Cart icon image styling */
+.cart-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+/* 
+
+.item {
+    width: 200px;
+}
+.item p {
+    margin: 6px 0;
+}
+.item img {
+    width: 250px;
+}
+.item-details {
+    display: flex;
+    gap: 20px;
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+} */

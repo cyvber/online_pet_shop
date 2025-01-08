@@ -1,0 +1,111 @@
+.mid-banner {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../assets/frontend_assets/WheatField.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik Scribble";
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between; /* Even spacing between images */
+    align-items: center;
+    width: 80%; /* Adjust to control the spacing */
+    flex-direction: row-reverse;
+}
+
+.card {
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    overflow: hidden; /* Ensures shadow follows the card shape */
+}
+
+.cards img {
+    width: 300px;
+    display: block; /* Removes any extra space below the image */
+    transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+}
+.card img:hover {
+    transform: scale(1.1); /* Scale the image by 10% on hover */
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: orange;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 20px 5px #ffcf1a;
+}
+
+/* For screens <= 1150px */
+@media (max-width: 1150px) {
+    .cards {
+        width: 90%; /* Increase width to accommodate the layout */
+    }
+
+    .cards img {
+        width: 250px; /* Adjust image size for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 28px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* For screens <= 900px */
+@media (max-width: 900px) {
+   
+
+    .cards img {
+        width: 200px; /* Adjust image size for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 24px; /* Reduce font size for smaller screens */
+    }
+}
+@media (max-width: 900px) {
+   
+
+    .cards img {
+        width: 150px; /* Adjust image size for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* For screens <= 600px */
+@media (max-width: 600px) {
+    .mid-banner {
+        height: 60vh; /* Further adjust height for mobile screens */
+    }
+
+    .cards {
+        width: 100%; /* Full width */
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px; /* Add gap between cards */
+    }
+
+    .cards img {
+        width: 180px; /* Further reduce image size for mobile */
+    }
+
+    .overlay-text {
+        font-size: 20px; /* Further reduce font size */
+    }
+}

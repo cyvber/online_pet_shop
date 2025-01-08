@@ -1,0 +1,201 @@
+.checkout-section {
+    width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    direction: rtl;
+    height: auto;
+}
+
+.checkout-section h2 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.checkout-customer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checkout-button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 30px; /* Adds spacing above the button */
+}
+
+.checkout-button {
+    display: flex;
+    font-family: 'heebo';
+    gap: 10px; /* Add space between text and image */
+    background-color: #FCBB32;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.checkoutbutton-lock-icon {
+    width: 20px;
+}
+
+.checkout-button:hover {
+    transform: scale(1.02);
+}
+
+.checkout-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+.checkout-total {
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl; /* Ensure proper RTL alignment */
+    text-align: right; /* Align the text to the right */
+}
+
+.checkout-total div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.checkout-total .checkout-total-payment {
+    font-weight: bold;
+    color: #000;
+    border-top: 1px solid #333; /* Horizontal line above total payment */
+}
+
+
+
+
+/* 
+
+
+
+ .checkout-section {
+    flex: 1;
+    max-height: 80vh;
+    position: sticky;
+    top: 20px; 
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.checkout-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.checkout-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.checkout-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+
+.checkout-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed; 
+}
+
+
+.delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.delivery-form label {
+    font-family: 'heebo';
+    font-weight: 200;
+    display: flex;
+    font-size: 16px;
+    color: #333;
+    
+}
+
+.delivery-form input,
+.delivery-form textarea {
+    padding: 2px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.delivery-form textarea {
+    resize: none;
+    height: 8px;
+}
+
+.delivery-form input:focus,
+.delivery-form textarea:focus {
+    outline: none;
+}
+
+.checkout-button {
+    
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .checkout-section {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .checkout-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout-button {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+}  */
