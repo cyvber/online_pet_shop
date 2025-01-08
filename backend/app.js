@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
-const dotenv = require("dotenv")
+
 // Import routes
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -11,10 +11,16 @@ const brandRoutes = require("./routes/brandRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 
+const allowedOrigins = process.env.API_URL;
+app.use(cors({
+  origin: allowedOrigins, // Only allow this origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
+  credentials: true, // If cookies or credentials are needed
+}));
 // Initialize the app
 const app = express();
 app.use(express.json());
-app.use(cors());
+
 dotenv.config()
 
 const mongo_url = process.env.MONGO_URL
