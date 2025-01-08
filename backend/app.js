@@ -16,7 +16,7 @@ const app = express();
 
 // Environment Variables
 const mongo_url = process.env.MONGO_URL; // MongoDB connection string
-const allowedOrigins = process.env.ALLOWED_ORIGINS
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [];
 
 // CORS Configuration
 app.use(
